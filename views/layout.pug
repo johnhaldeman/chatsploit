@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+  body
+    nav.navbar.navbar-dark.bg-dark
+      div.d-flex.justify-content-start
+        a.navbar-brand(href="#") Chatsploit: On the Internet, Nobody Knows You're a Dog
+        span.navbar-text Security is Our Lowest Priority
+      div
+        ul.nav.navbar
+          li.nav-item.active
+            a.nav-link.text-light(href="/chatsploit/messages") Continue Chatting
+          li.nav-item
+            a.nav-link.text-light(href="/chatsploit/findusers") Find People
+          li.nav-item
+            a.nav-link.text-light(href="/logout") Logout
+    br
+    div.container-fluid
+      div.row
+        block content
+        
+

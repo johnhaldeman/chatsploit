@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    div(class="col-3")
+    div(class="col-6")
+        form(method="get" action="")
+            div(class="form-group")
+                label(for="find") Search Username:
+                input(type="text" name="search" class="form-control" id="find" placeholder="Search Username" value=text)
+                button(class="btn btn-primary" type="submit") Search
+        br
+        table(class="table table-hover table-dark")
+            tr
+                th Chat!
+                each header in headers
+                    th #{header}
+            each row in results
+                tr
+                    td
+                        a.btn.btn-success(href="messages?with_user="+ row.username.trim() + "#end") Chat!
+                    each val in row
+                        td #{val}
+    div(class="col-3")

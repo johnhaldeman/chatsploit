@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    div(class="col-2")
+        h3 Users:
+        each convo in convos
+            ul.list-group
+                if(convo.usr.trim() === with_user)
+                    a.list-group-item.list-group-item-action.active(href=`messages?with_user=${convo.usr.trim()}#end`) #{convo.usr}
+                else
+                    a.list-group-item.list-group-item-action(href=`messages?with_user=${convo.usr.trim()}#end`) #{convo.usr}
+    div.col-10
+        h3 Chat with #{with_user}
+        div(style="height:calc(100vh - 350px); overflow: auto")
+            each message in messages
+                div.row(style="width:98%")
+                    if user === message.from_user.trim()
+                        div.col-1
+                        div.col-11
+                            div(class="alert alert-success" role="alert")
+                                strong #{message.sent} From: #{message.from_user}
+                                br
+                                pre #{message.message}
+                    else
+                        div.col-11
+                            div(class="alert alert-primary" role="alert")
+                                strong #{message.sent} From: #{message.from_user}
+                                br
+                                pre #{message.message}
+                        div.col-1
+            div(id="end")
+    div(class="col-2")
+    div(class="col-10")
+        form(method="post" action='#end')
+            div.form-group
+                label(for="textarea") New Message:
+                textarea.form-control(id="textarea" name="newmessage" rows="4")
+            input(type="hidden" name="user" value=user)
+            input(type="hidden" name="with_user" value=with_user)
+            button.btn.btn-primary(type="submit" style="margin-right: 10px;") Send
+            a.btn.btn-success(href="messages?with_user=" + with_user +"&refreshtoggle=" + toggle + "#end") Refresh
+
+

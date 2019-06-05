@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    div(class="col-4")
+    div(class="col-4")
+        form(action="/login" method="post")
+            label(for='username') Username: 
+            input.form-control(type='text', placeholder='username' name='username')
+            br
+            label(for='password') Password: 
+            input.form-control(type='password', placeholder='password' name='password')
+            br
+            input.form-control.btn-primary(type='submit', value='Submit')
+    div(class="col-4")
+
+
