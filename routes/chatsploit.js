@@ -14,8 +14,10 @@ router.get('/findusers', require('connect-ensure-login').ensureLoggedIn(), funct
         })
     }
 
-    let lowersearch = text.toLowerCase();
-    sql.runQuery(`SELECT username, name, email FROM dbo.users where username like '%${lowersearch}%'`)
+    let lowersearch = "%" + text.toLowerCase() +"%";
+    sql.getPool().request()
+        .input('searchstring', mssql.Char, lowersearch)
+        .query(`SELECT username, name, email FROM dbo.users where username like @searchstring`)
         .then(
             result => {
                 res.render('find', {
