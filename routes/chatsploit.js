@@ -46,8 +46,7 @@ function getMessages(req, res, next){
     console.log(toggle);
 
     sql.runQuery(`SELECT from_user, to_user, message, sent FROM dbo.messages where 
-                (from_user = '${with_user}' and to_user = '${req.user.username}') OR
-                (from_user = '${req.user.username}' and to_user = '${with_user}')
+                (from_user = '${with_user}' and to_user = '${req.user.username}') OR (from_user = '${req.user.username}' and to_user = '${with_user}')
                 ORDER BY sent ASC;
 
                 SELECT from_user as usr FROM dbo.messages where 
