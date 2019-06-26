@@ -1,7 +1,7 @@
 # chatsploit
 Chatsploit: A simple chat server used to demonstrate security problems in code
 
-# OWASP Top 10
+## OWASP Top 10
 Chatsploit was developed specifically to help illustrate the issues discussed in the
 Open Application Security Project (OWASP) Top 10 2017 security problems. The application
 is used in conjunction with persentations on each of the security issues. The
