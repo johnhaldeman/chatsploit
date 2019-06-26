@@ -8,15 +8,15 @@ is used in conjunction with persentations on each of the security issues. The
 presentations have been included in this repository as well:
 
 1. [Injection](https://github.com/johnhaldeman/chatsploit/blob/master/Injection.pdf)
-2. Broken Authentication
-3. Sensitive Data Exposure
-4. XML External Entities (XXE)
-5. Broken Access Control
-6. Security Misconfiguration
-7. Cross-Site Scripting
-8. Insecure Deserialization
-9. Using components with known vulnerabilities
-10. Insufficient Logging and Monitoring
+2. Broken Authentication (TODO)
+3. Sensitive Data Exposure (TODO)
+4. XML External Entities (XXE) (TODO)
+5. Broken Access Control (TODO)
+6. Security Misconfiguration (TODO)
+7. Cross-Site Scripting (TODO)
+8. Insecure Deserialization (TODO)
+9. Using components with known vulnerabilities (TODO)
+10. Insufficient Logging and Monitoring (TODO)
 
 ## Setting Up Your Own Chatsploit Server
 **Please note:** Chatsploit is only used for demonstrations of security vulnerabilities. 
