@@ -24,7 +24,7 @@ You shouldn't use the code for anything other than learning about those issues.
 
 ### Step 1: Install Node, dependancies, and chatsploit
 - Download and install Node.js unless you have it already: https://nodejs.org/en/
-- Clone the repository: git clone https://github.com/johnhaldeman/chatsploit.git
+- Clone the repository: ```git clone https://github.com/johnhaldeman/chatsploit.git```
 - Install javascript dependancies: ```npm install```
 - Install MS SQL Server. SQL Express is free to use: https://www.microsoft.com/en-us/sql-server/sql-server-editions-express
 
